@@ -1,0 +1,78 @@
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h3{
+  border-bottom: 1px solid;
+  text-align: center;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.education-group {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+/* .education-group input{
+  width: 80%;
+ 
+} */
+.experience-group {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+.skill-group{
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+.input-skill{
+  width: 50%;
+}
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.removebtn{
+  background-color: #dc3545;
+  margin-left: 8px;
+}
+
+.removebtn:hover {
+  background-color: #c82333;
+}
+.add{
+  background-color: green;
+  margin-left: 8px;
+
+}
+.add:hover{
+  background-color:rgb(60, 182, 60)
+  
+}

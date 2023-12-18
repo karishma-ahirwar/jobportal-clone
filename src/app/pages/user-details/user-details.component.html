@@ -1,0 +1,34 @@
+<!-- user-profile.component.html -->
+
+<div *ngIf="userProfile">
+  <h2>User Profile</h2>
+  <!-- <p><strong>Name:</strong> {{ userProfile.name }}</p>
+  <p><strong>Email:</strong> {{ userProfile.email }}</p>
+  <p><strong>Degree:</strong> {{ userProfile.degree }}</p>
+  <p><strong>University:</strong> {{ userProfile.university }}</p>
+  <p><strong>Year:</strong> {{ userProfile.year }}</p> -->
+
+  <!-- Display workExperience -->
+  <div *ngIf="userProfile.workExperience && userProfile.workExperience.length > 0">
+    <strong>Work Experience:</strong>
+    <ul>
+      <li *ngFor="let experience of userProfile.workExperience">
+        <p><strong>Title:</strong> {{ experience.title }}</p>
+        <p><strong>Company:</strong> {{ experience.company }}</p>
+        <p><strong>Start Date:</strong> {{ experience.startDate }}</p>
+        <p><strong>End Date:</strong> {{ experience.endDate }}</p>
+        <p><strong>Description:</strong> {{ experience.description }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Display skills -->
+  <div *ngIf="userProfile.skills && userProfile.skills.length > 0">
+    <strong>Skills:</strong>
+    <ul>
+      <li *ngFor="let skill of userProfile.skills">{{ skill.name }}</li>
+    </ul>
+  </div>
+
+  <!-- Add more fields as needed -->
+</div>

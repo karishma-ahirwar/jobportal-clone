@@ -1,0 +1,22 @@
+<!-- <body> -->
+  <form [formGroup]="registrationForm" (ngSubmit)="register()">
+   <h2>
+    Registration Form</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username" />
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" />
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" />
+  
+    <label for="role">Role:</label>
+    <select id="role" formControlName="role">
+      <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+    </select>
+  
+    <button type="submit">Register</button>
+  </form>
+  
+<!-- </body> -->

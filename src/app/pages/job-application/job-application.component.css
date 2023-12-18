@@ -1,0 +1,46 @@
+/* job-application.component.css */
+
+/* Apply basic styles to the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Style the heading */
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  p{
+    text-align: center;
+  }
+  
+  /* Style form labels */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  /* Style form input fields */
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Style the submit button */
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Add some hover effect to the button */
+  button:hover {
+    background-color: #45a049;
+  }
+  

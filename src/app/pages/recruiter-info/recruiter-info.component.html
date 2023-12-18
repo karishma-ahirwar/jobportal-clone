@@ -1,0 +1,23 @@
+<!-- <p>recruiter-info works!</p> -->
+
+<h2>Recruiter Details</h2>
+
+    <form [formGroup]="recruiterForm" (ngSubmit)="recruiter()">
+        <!-- <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" /> -->
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" />
+      
+        <label for="companyName">companyName:</label>
+        <input type="text" id="companyName" formControlName="companyName" />
+      
+        <label for="phone">phone:</label>
+        <input type="text" id="phone" formControlName="phone" />
+      
+        <label for="address">address:</label>
+        <!-- <input type="text" id="address" formControlName="address" /> -->
+      <textarea name="address" id="address"  formControlName="address" cols="30" rows="10">address</textarea>
+        <button type="submit">Register</button>
+      </form>
+      

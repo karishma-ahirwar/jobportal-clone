@@ -1,0 +1,349 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "jobseeker1",
+      "password": "password1",
+      "email": "jobseeker1@example.com",
+      "role": "jobseeker"
+    },
+    {
+      "id": 2,
+      "username": "recruiter1",
+      "password": "password2",
+      "email": "recruiter1@example.com",
+      "role": "recruiter"
+    },
+    {
+      "username": "jk",
+      "password": "jk",
+      "email": "jk@gmail.com",
+      "role": "jobseeker",
+      "id": 3
+    },
+    {
+      "username": "karishma",
+      "password": "1234",
+      "email": "karishmaahi339@gmail.com",
+      "role": "jobseeker",
+      "id": 4
+    }
+  ],
+  "userProfiles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "education": [
+        {
+          "id": 1,
+          "degree": "Bachelor's in Computer Science",
+          "university": "XYZ University",
+          "year": "2018"
+        }
+      ],
+      "workExperience": [
+        {
+          "id": 1,
+          "title": "Software Developer",
+          "company": "Tech Solutions Inc.",
+          "startDate": "2018-01-01",
+          "endDate": "2022-12-31",
+          "description": "Worked on web application development..."
+        }
+      ],
+      "skills": [
+        {
+          "id": 1,
+          "name": "JavaScript"
+        },
+        {
+          "id": 2,
+          "name": "Java"
+        },
+        {
+          "id": 3,
+          "name": "Python"
+        },
+        {
+          "id": 4,
+          "name": "Angular"
+        },
+        {
+          "id": 5,
+          "name": "React"
+        }
+      ],
+      "profilePicture": "jobseeker1_profile.jpg",
+      "ResumeUrl": ""
+    },
+    {
+      "userId": null,
+      "degree": "b.tech",
+      "university": "RGPV",
+      "year": "2023",
+      "workExperience": [
+        {
+          "title": "Application developer",
+          "company": "mastek ",
+          "startDate": "0023-01-11",
+          "endDate": "0023-05-11",
+          "description": "mastek........"
+        }
+      ],
+      "skills": [
+        {
+          "name": "java,jsp,html,css"
+        },
+        {
+          "name": "angular ,mysql,node js"
+        }
+      ],
+      "profilePicture": "C:\\fakepath\\KarishmaAhirwar_page-0001.jpg",
+      "resumeUrl": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "degree": "b.tech",
+      "university": "RGPV",
+      "year": "2023",
+      "workExperience": [
+        {
+          "title": "MEAN stack",
+          "company": "HK",
+          "startDate": "2023-02-18",
+          "endDate": "",
+          "description": "worked on mean stack"
+        }
+      ],
+      "skills": [
+        {
+          "name": "angular"
+        },
+        {
+          "name": "node js ,mysql"
+        }
+      ],
+      "profilePicture": "C:\\fakepath\\images all books.zip",
+      "resumeUrl": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 3
+    },
+    {
+      "userId": 4,
+      "degree": "bba",
+      "university": "aa",
+      "year": "2023",
+      "workExperience": [
+        {
+          "title": "AD",
+          "company": "Mastek",
+          "startDate": "0023-11-11",
+          "endDate": "0024-11-11",
+          "description": "worked on application web."
+        }
+      ],
+      "skills": [
+        {
+          "name": "java,jsp,js,mysql"
+        },
+        {
+          "name": ""
+        }
+      ],
+      "profilePicture": "C:\\fakepath\\KarishmaAhirwar_page-0001.jpg",
+      "resumeUrl": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 4
+    },
+    {
+      "userId": null,
+      "degree": "mtech",
+      "university": "rgpv",
+      "year": "2024",
+      "workExperience": [
+        {
+          "title": "development",
+          "company": "cis",
+          "startDate": "0023-11-11",
+          "endDate": "0024-11-11",
+          "description": "developed online website"
+        }
+      ],
+      "skills": [
+        {
+          "name": "java,jsp,"
+        },
+        {
+          "name": "sql,dbms,js,json"
+        }
+      ],
+      "profilePicture": "C:\\fakepath\\KarishmaAhirwar_page-0001.jpg",
+      "resumeUrl": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 5
+    }
+  ],
+  "jobListings": [
+    {
+      "title": "Technical Consultent",
+      "company": "Mastek",
+      "location": "Ahmedabad,Gujrat",
+      "postedDate": "2023-12-07T13:59:30.308Z",
+      "description": "We are looking for a skilled Technical Consultent  ",
+      "requirements": "Bachelor's degree in Computer Science...",
+      "type": "full time",
+      "industry": "it",
+      "recruiterId": "2",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "title": "Marketing Specialist",
+      "company": "XYZ Marketing Agency",
+      "location": "San Francisco",
+      "postedDate": "2023-07-30",
+      "description": "We need a creative marketing specialist...",
+      "requirements": "Bachelor's degree in Marketing...",
+      "type": "Contract",
+      "industry": "Marketing",
+      "recruiterId": 2
+    },
+    {
+      "title": "Marketing Specialist",
+      "company": "XYZ Marketing Agency",
+      "location": "San Francisco",
+      "postedDate": "2023-07-30",
+      "description": "We need a creative marketing specialist...",
+      "requirements": "Bachelor's degree in Marketing...",
+      "type": "Contract",
+      "industry": "Marketing",
+      "recruiterId": 2,
+      "id": 3
+    },
+    {
+      "title": "Software Engineer",
+      "company": "ABC Tech Solutions",
+      "location": "New York",
+      "postedDate": "2023-12-05",
+      "description": "We are looking for a skilled software engineer...",
+      "requirements": "Bachelor's degree in Computer Science...",
+      "type": "Full-time",
+      "industry": "Information Technology",
+      "recruiterId": "1",
+      "id": 4
+    },
+    {
+      "title": "Technical Recruiter IT",
+      "company": "HackerKernel",
+      "location": " 65, E8, Arera Colony, Bhopal, Madhya Pradesh 462039",
+      "postedDate": "2023-12-13T11:31:11.838Z",
+      "description": "Bachelor's degree in related technical and/or human resources field required. Excellent verbal and written communication skills.",
+      "requirements": " Communicating with hiring managers to identify future job openings and the technical requirements for those jobs.",
+      "type": "Full Time",
+      "industry": "Software company",
+      "recruiterId": "2",
+      "id": 5
+    },
+    {
+      "title": "sd",
+      "company": "hk",
+      "location": "bhopal",
+      "postedDate": "2023-12-13T11:50:46.079Z",
+      "description": "aaaaa",
+      "requirements": "btech",
+      "type": "full time",
+      "industry": "it",
+      "recruiterId": null,
+      "id": 6
+    },
+    {
+      "title": "manager",
+      "company": "semiconductor",
+      "location": "indore",
+      "postedDate": "2023-12-15T17:55:05.357Z",
+      "description": "worked on chips and parts of engine ",
+      "requirements": "b.tech,m.tech",
+      "type": "full-time",
+      "industry": "core",
+      "recruiterId": 2,
+      "id": 7
+    }
+  ],
+  "recruiters": [
+    {
+      "id": 1,
+      "userId": null,
+      "companyName": "ABC Tech Solutions",
+      "email": "recruiter1@example.com",
+      "phone": "987-654-3210",
+      "address": "456 Park Avenue, San Francisco"
+    },
+    
+    {
+      "userId": 2,
+      "companyName": "hackerkernel",
+      "email": "recruiter1@example.com",
+      "phone": "08319903137",
+      "address": "kile andar chopada ,vidisha",
+      "id": 2
+    }
+  ],
+  "jobApplications": [
+    {
+      "jobListingId": 0,
+      "jobSeekerId": 0,
+      "applicationDate": "2023-12-05T11:05:09.116Z",
+      "status": "Pending",
+      "message": "Your application message here",
+      "id": 1
+    },
+    {
+      "jobListingId": null,
+      "jobSeekerId": null,
+      "applicationDate": "2023-12-07T08:57:25.245Z",
+      "status": "Pending",
+      "message": "Your application message here",
+      "name": "Karishma ",
+      "resume": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 2
+    },
+    {
+      "jobListingId": "1",
+      "jobSeekerId": 4,
+      "applicuserIdDate": "2023-12-12T09:19:06.010Z",
+      "status": "Pending",
+      "message": "Your application message here",
+      "name": "seema",
+      "resume": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 3
+    },
+    {
+      "jobListingId": "1",
+      "jobSeekerId": 2,
+      "applicuserIdDate": "2023-12-12T12:40:22.426Z",
+      "status": "Pending",
+      "message": "Your application message here",
+      "name": "meenu",
+      "resume": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 4
+    },
+    {
+      "jobListingId": "2",
+      "jobSeekerId": 3,
+      "applicuserIdDate": "2023-12-12T13:46:12.819Z",
+      "status": "Pending",
+      "message": "Your application message here",
+      "name": "seema",
+      "resume": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 5
+    },
+    {
+      "jobListingId": "1",
+      "jobSeekerId": 4,
+      "applicuserIdDate": "2023-12-15T17:43:45.044Z",
+      "status": "Pending",
+      "message": "Your application message here",
+      "name": "Karishma Ahirwar",
+      "resume": "C:\\fakepath\\IMG20220329193207 - Copy.jpg",
+      "id": 6
+    }
+  ]
+}

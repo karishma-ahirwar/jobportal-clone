@@ -1,0 +1,26 @@
+<!-- <p>applied-job-seeker works!</p> -->
+
+<div *ngIf="jobApplications && jobApplications.length > 0">
+    <h2>All Job Applications</h2>
+
+    <div class="search-container">
+      <input type="text" (input)="onSearchInputChange($event)" placeholder="Search by name , jobSeekerId or jobListingId" class="search-input">
+      <button class="search-button" (click)="search()">Search</button>
+    </div>
+    
+    <ul>
+      <li *ngFor="let application of jobApplications" [hidden]="application.hidden" >
+        
+        <p *ngIf="jobTitle">{{jobTitle.company}}</p>
+        <p> jobListingId:{{ application.jobListingId }},</p>
+        <p>  jobSeekerId :{{ application.jobSeekerId }},</p>
+        <p>ApplicuserIdDate :{{ application.applicuserIdDate }}</p>
+        <p>Name: {{application.name}}</p>
+        <p>Resume: {{application.resume}}</p>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!jobApplications || jobApplications.length === 0">
+    <p>No job applications found.</p>
+  </div>
+  

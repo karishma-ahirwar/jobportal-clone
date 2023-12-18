@@ -1,0 +1,115 @@
+<body>
+    <header>
+    <div class="navbar">
+        <div class="nav-links">
+          <a routerLink="/new-job" class="add-jobs">Add New Job</a>
+          <a (click)="viewAppliedJobSeekers()" class="Appleid">Appleid job Seeker</a>
+        </div>
+        <div class="user-actions">
+          <a  class="login"> <div class="dropdown">
+            <!-- <a
+              data-mdb-dropdown-init
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              aria-expanded="false"
+            >
+              <img
+                (click)="isClick = true"
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+                routerLink="/recruiter-info"
+              />
+            </a> -->
+            <!-- <ul 
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuAvatar"
+            > -->
+              <!-- <li> -->
+                <a class="dropdown-item" routerLink="/recruiter-Detail">My profile</a>
+              <!-- </li> -->
+              <!-- </ul> -->
+         </div>
+        </a>
+
+        </div>
+      </div>
+               <!-- Search Bar -->
+ <div class="search-container">
+  <input type="text" (input)="onSearchInputChange($event)" placeholder="Search by location or company" class="search-input">
+  <button class="search-button" (click)="search()">Search</button>
+</div>  
+</header>
+<div class="container">
+  <!-- Display recruiter details and job postings -->
+<!-- <h2>Welcome, {{ recruiter.companyName }}!</h2> -->
+
+<!-- <p>Contact Information:</p>
+<ul  *ngFor="let recruiter of recruiterInfo ">
+  <li>Username: {{ recruiter.Username }}</li>
+  <li>Email: {{ recruiter.email }}</li>
+  <li>Phone: {{ recruiter.phone }}</li>
+  <li>companyName: {{ recruiter.companyName }}</li>
+  <li>address: {{ recruiter.address }}</li>
+</ul> -->
+
+<!-- <h3>Your Job Postings:</h3>
+<div *ngFor="let job of recruiterJobs">
+  <h4>{{ job.title }}</h4>
+  <p>Location: {{ job.location }}</p>
+  <p>Posted Date: {{ job.postedDate | date }}</p> -->
+
+  <!-- View applications button -->
+  <!-- <button (click)="viewJobApplications(job.id)">View Applications</button> -->
+</div>
+
+<!-- Display job applications -->
+<!-- <div *ngIf="selectedJobApplications">
+  <h3>Job Applications for {{ selectedJobTitle }}</h3>
+  <div *ngFor="let application of selectedJobApplications">
+    <p>Name: {{ application.name }}</p>
+    <p>Application Date: {{ application.applicationDate | date }}</p>
+    <p>Status: {{ application.status }}</p>
+    <p>Message: {{ application.message }}</p> -->
+    <!-- Add more details as needed -->
+  <!-- </div>
+</div>
+
+</div> -->
+
+
+<!-- joblisting page -->
+<div class="table-container">
+  <h2>Job Listings / For Recruiter </h2>
+  <table class="job-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Type</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let post of Posts" [hidden]="post.hidden">
+      <tr>
+        <td>{{ post.title }}</td>
+        <td>{{post.company}}</td>
+        <td>{{post.location}}</td>
+        <td>{{post.type}}</td>
+        <td>
+          <button type="button" class="view-button" (click)="viewJobDetail(post.id)" [routerLink]="['/job-detail', post.id]">view</button>
+          <button type="button" class="remove-button" (click)="deleteFunc(post.id)">Remove</button></td>
+      </tr>
+      <!-- Add more rows as needed            routerLink="/job-detail/{{ post.id }}" -->
+    </tbody>
+ </table>
+</div>
+
+
+
+</body>

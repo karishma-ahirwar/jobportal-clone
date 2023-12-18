@@ -1,0 +1,39 @@
+<body>
+
+<form [formGroup]="jobPostForm">
+  <!-- (ngSubmit)="submitJobPost(jobPostForm.value)" -->
+   
+<h3>Add New Job ...</h3>
+
+    <label for="title">Title:</label>
+    <input type="text" formControlName="title" placeholder="title"/>
+
+    <label for="company">Company:</label>
+    <input type="text" formControlName="company" placeholder="company"/>
+
+    <label for="location">Location:</label>
+    <input type="text" formControlName="location" placeholder="location"/>
+
+    <label for="postedDate">postedDate:</label>
+    <input type="datetime" formControlName="postedDate" placeholder="postedDate"/>
+    
+    <label for="description">Description:</label>
+    <input type="text" formControlName="description" placeholder="description"/>
+    
+    <label for="requirements">Requirements:</label>
+    <input type="text" formControlName="requirements" placeholder="requirements" />
+  
+    <label for="type">Type:</label>
+    <input type="text" formControlName="type" placeholder="type"/>
+    
+    <label for="industry">Industry:</label>
+    <input type="text" formControlName="industry" placeholder="industry"/>
+    
+    <!-- <label for="recruiterId">RecruiterId:</label>
+    <input type="text" formControlName="recruiterId" placeholder="recruiterId"/> -->
+  
+    <button type="submit" (click)="submitJobPost()">Create New Job </button>
+    <!--  [disabled]="jobPostForm.invalid" -->
+  </form>
+  
+</body>

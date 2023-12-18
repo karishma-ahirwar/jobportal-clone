@@ -1,0 +1,17 @@
+<div class="Profile">
+  <!-- recruiter-details.component.html -->
+
+<h2>Recruiter Details</h2>
+
+<div *ngIf="recruiterDetails" >
+  <p><strong>Company Name:</strong> {{ recruiterDetails.companyName }}</p>
+  <p><strong>Email:</strong>{{ recruiterDetails.email }}</p>
+  <p><strong>Phone:</strong> {{ recruiterDetails.phone }}</p>
+  <p><strong>Address:</strong> {{ recruiterDetails.address }}</p>
+</div>
+<div>
+  <button class="btn btn-primary" [routerLink]="['/edit-recruiter',recruiterDetails.id]">Edit</button>
+</div>
+<button type="button" class="Uploadbtn" routerLink="/recruiter-info"> Upload Profile Details </button>
+
+</div>

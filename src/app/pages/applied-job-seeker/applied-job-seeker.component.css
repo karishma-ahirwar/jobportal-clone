@@ -1,0 +1,57 @@
+/* your-component.component.css */
+:host {
+    display: block;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 1px solid #333;
+    
+  }
+  
+  
+.search-container {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  margin-top:15px;
+  margin-left: 35%;
+}
+
+.search-input {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: 1px solid #4caf50;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  p {
+    color: #888;
+  }
+  

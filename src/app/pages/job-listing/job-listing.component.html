@@ -1,0 +1,73 @@
+<header>
+    <div class="navbar">
+        <div class="nav-links">
+          <a routerLink="/job-listing" class="jobs" >jobs</a>
+          <!-- <a routerLink="" class="Appleid">Appleid Job</a> -->
+        </div>
+               <h2>Find Your Dream Job Now </h2>
+     
+         <!-- Search Bar -->
+ <div class="search-container">
+    <input type="text" (input)="onSearchInputChange($event)" placeholder="Search by location or company" class="search-input">
+    <button class="search-button" (click)="search()">Search</button>
+  </div>
+   <div class="user-actions">
+    
+
+<div class="dropdown">
+  <!-- <a
+    class="dropdown-toggle d-flex align-items-center hidden-arrow"
+    href="#"
+    id="navbarDropdownMenuAvatar"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  > -->
+    <!-- <img
+      src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+      class="rounded-circle"
+      height="25"
+      alt="Black and White Portrait of a Man"
+      loading="lazy"
+      routerLink="/user-profile"
+    /> -->
+  
+      <a class="dropdown-item" routerLink="/user-details" [routerLinkActive]="['active']" >User Profile</a>
+      <!-- (click)="loadUserProfile()" -->
+    
+  
+  </div>
+        </div>
+      </div>
+          
+</header>
+<!-- <mat-card>Simple card</mat-card> -->
+<div class="table-container">
+    <h2>Job Listings</h2>
+    <table class="job-table">
+      <thead>
+        <tr>
+          <th>Title2</th>
+          <th>Company</th>
+          <th>Location</th>
+          <th>postedDate</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let post of Posts" [hidden]="post.hidden">
+        <tr >
+          <td>{{ post.title }}</td>
+          <td>{{post.company}}</td>
+          <td>{{post.location}}</td>
+          <td>{{post.postedDate}}</td>
+          <td>{{post.type}}</td>
+          <td>
+            <button type="button" class="view-button" (click)="viewJobDetail(post.id)" [routerLink]="['/job-detail', post.id]">view</button>
+            <button type="button" class="apply-button" (click)="apply(post.id)">Apply</button></td>
+        </tr>
+        <!-- Add more rows as needed            routerLink="/job-detail/{{ post.id }}" -->
+      </tbody>
+   </table>
+  </div>
+  

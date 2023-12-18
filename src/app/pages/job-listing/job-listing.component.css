@@ -1,0 +1,146 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    /* background-color: #333; */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    border-bottom: 1px solid #333;
+  }
+
+  .logo img {
+    height: 40px; /* Adjust the height as needed */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color:rgba(0, 136, 255, 0.927); 
+    /* transition: background-color 0.3s ease;  */
+  }
+  .nav-links a:hover{
+    background-color: #4CAF50; 
+  }
+
+  .user-actions {
+    display: flex;
+    gap: 15px;
+  }
+  h1 {
+    /* margin-top: 20px; */
+    /* text-align: center; */
+    color: #333;
+  }
+  .search-container {
+    margin: 20px 0;
+    /* display: flex; */
+    /* align-items: center; */
+    /* margin-top:15px; */
+    /* margin-left: 35%; */
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: 1px solid #4caf50;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  .search-button:hover{ 
+     background-color: rgba(0, 136, 255, 0.927); /* Green color, you can change it */
+    }
+  .dropdown-item{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: rgb(56, 55, 55);
+
+  }
+  
+    .login, .register {
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 500px;
+    background-color: rgba(0, 136, 255, 0.927); /* Green color, you can change it */
+  }
+  
+  .table-container {
+    margin: 20px;
+  }
+  /* h2{
+    
+    border-bottom: 1px solid #333;
+  } */
+  
+  .job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .job-table th, .job-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .job-table th {
+    background-color: #f2f2f2;
+  }
+
+
+  .apply-button {
+    background-color: rgba(0, 136, 255, 0.927);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .view-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .apply-button:hover{
+    background-color: #4CAF50;
+  }
+  .view-button:hover{
+    background-color:rgb(71, 218, 71);
+  }

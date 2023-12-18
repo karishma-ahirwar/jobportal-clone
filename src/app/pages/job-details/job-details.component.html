@@ -1,0 +1,37 @@
+<body>
+  <div class="table-container">
+    <h2>Job Details</h2>
+    <table class="job-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Company</th>
+          <th>Location</th>
+          <th>postedDate</th>
+          <th>description</th>
+          <th>requirements</th>
+          <th>Type</th>
+          <th>industry</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="job">
+        <tr>
+          <td>{{job.title}}</td>
+          <td>{{job.company}}</td>
+          <td>{{job.location}}</td>
+          <td>{{job.postedDate}}</td>
+          <td>{{job.description}}</td>
+          <td>{{job.requirements}}</td>
+          <td>{{job.type}}</td>
+          <td>{{job.industry}}</td>
+         
+          
+          <td><button class="apply-button" [routerLink]="['/apply', job.id]" (click)="apply(job.id)">Apply</button></td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+  <small> {{job.id}}</small>
+  </div>
+  
+</body>

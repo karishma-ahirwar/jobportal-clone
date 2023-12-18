@@ -1,0 +1,50 @@
+body{
+  background-image: url("/assest/img/recruiter.avif");
+}
+
+.table-container {
+    margin: 20px;
+    border-radius: 1px solid;
+  }
+   h2{
+    border-bottom: 1px solid #333;
+   }
+  .job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .job-table th, .job-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    border-radius: 1px;
+  }
+  
+  .job-table th {
+    background-color: #f2f2f2;
+  }
+  td:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  .apply-button {
+    background-color: rgba(0, 136, 255, 0.927);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+ 
+  .apply-button:hover{
+    background-color: #4CAF50;
+  }
+  
+  
