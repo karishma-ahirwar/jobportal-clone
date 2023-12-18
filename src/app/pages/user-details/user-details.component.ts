@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { userProfiles } from 'src/app/data-type';
 import { JobService } from 'src/app/service/job.service';
 
@@ -10,48 +10,60 @@ import { JobService } from 'src/app/service/job.service';
 })
 export class UserDetailsComponent implements OnInit {
   userId: any;
-  // userForm :any;
-  userProfile: userProfiles | undefined;
+  userProfile: any;
 
-  constructor(private UserService:JobService,private route:ActivatedRoute){
+  constructor(
+    private UserService:JobService,
+    private route:ActivatedRoute,
+    private router:Router
+    ){
 
     const userData = localStorage.getItem('currentUser');
     if (userData) {
       const user = JSON.parse(userData);
-      this.userId = user.id;
+      this.userId = user;
       console.log("currentUser jobseekers user",user);
     }
   }
 
   ngOnInit(): void {
-    this.getUserProfiles();
+    this.getUserProfile();
   }
-  getUserProfiles(){
-    // const userId = +this.route.snapshot.paramMap.get('id')!;
-    this.UserService.getUserProfilesById(this.userId).subscribe((userProfile:any)=>{
-        userProfile = userProfile
-        console.log("userProfile details",userProfile);
-        
-        },
-      error => console.error('Error fetching user profile', error)
+  
+  getUserProfile() {
+    this.UserService.getUserProfilesById(this.userId.id).subscribe(
+      (profile) => {
+        this.userProfile = profile;
+        console.log('User profile retrieved successfully:', this.userProfile);
+      },
+      (error) => {
+        console.error('Error retrieving user profile:', error);
+      }
     );
-
-    // this.UserService.getUserProfilesById(this.userId).subscribe((response :any)=>{
-    //   console.log("api response",response);
-    //   if(response && response.length>0){
-    //     this.userForm = response[0];
-    //     console.log("jobSeeker userProfile details",this.userForm);
-    //   }
-    // },
-    // (error)=>{
-    //   console.log("error fetching userProfile" , error);
-      
-    // })
   }
 
-  // isArrayNotEmpty(array: any[]): boolean {
-  //   return array && array.length > 0;
-  // }
+  
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   

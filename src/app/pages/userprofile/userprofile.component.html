@@ -1,8 +1,11 @@
 <!-- user-profile.component.html -->
 
 <form [formGroup]="userForm" (ngSubmit)="submitUser()">
+<h2>User Profile</h2>
+        <label for="name">Name:</label>
+        <input type="text" formControlName="name" placeholder="name" required />
 
-  <label for="degree">Degree:</label>
+        <label for="degree">Degree:</label>
         <input type="text" formControlName="degree" placeholder="Degree" required />
 
         <label for="university">University:</label>

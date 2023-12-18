@@ -71,6 +71,7 @@ export interface jobApplications{
   export interface userProfiles {
     id: number;
     userId: string;
+    name:string,
     degree: string;
     university: string;
     year: string;

@@ -17,10 +17,19 @@ export class EditRecruiterComponent {
     private recruiterService: JobService,
     private route: ActivatedRoute,
     private router : Router
-  ) {}
+  ) {
+    const userData = localStorage.getItem('currentUser');
+    if (userData) {
+      const user = JSON.parse(userData);
+      this.userId = user;
+      console.log(user,"currentUser recruiter user");
+      
+    }
+  }
 
   ngOnInit(): void {
     this.editRecruiterForm = this.formBuilder.group({
+      userId :[ this.userId.id,Validators.required],
       email: ['', [Validators.required, Validators.email]],
       companyName: ['', Validators.required],
       phone: ['', Validators.required],
@@ -30,7 +39,7 @@ export class EditRecruiterComponent {
     // Get the recruiterId from the route parameters
     this.route.params.subscribe((params) => {
       this.userId = +params['id'];
-      // Fetch the existing recruiter data for editing
+
       this.fetchRecruiterData();
     });
   }
@@ -50,12 +59,10 @@ export class EditRecruiterComponent {
   OnSubmit() {
     if (this.editRecruiterForm.valid) {
       const recruiterData = this.editRecruiterForm.value;
-
-      // Call the service method to update the recruiter information
       this.recruiterService.updateRecruiter(this.userId, recruiterData).subscribe(
         (response) => {
           console.log('Recruiter updated successfully:', response);
-          this.router.navigateByUrl('')
+          // this.router.navigateByUrl('recruiter-home');
         },
         (error) => {
           console.error('Error updating recruiter:', error);

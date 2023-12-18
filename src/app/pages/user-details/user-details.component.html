@@ -1,12 +1,12 @@
-<!-- user-profile.component.html -->
 
-<div *ngIf="userProfile">
-  <h2>User Profile</h2>
-  <!-- <p><strong>Name:</strong> {{ userProfile.name }}</p>
-  <p><strong>Email:</strong> {{ userProfile.email }}</p>
+<div *ngIf="userProfile" class="user-detail">
+  
+<h2>User Details</h2>
+  <p><strong>Name:</strong> {{ userProfile.name }}</p>
+  <!-- <p><strong>Email:</strong> {{ userProfile.email }}</p> -->
   <p><strong>Degree:</strong> {{ userProfile.degree }}</p>
   <p><strong>University:</strong> {{ userProfile.university }}</p>
-  <p><strong>Year:</strong> {{ userProfile.year }}</p> -->
+  <p><strong>Year:</strong> {{ userProfile.year }}</p>
 
   <!-- Display workExperience -->
   <div *ngIf="userProfile.workExperience && userProfile.workExperience.length > 0">
@@ -29,6 +29,13 @@
       <li *ngFor="let skill of userProfile.skills">{{ skill.name }}</li>
     </ul>
   </div>
-
-  <!-- Add more fields as needed -->
+  
+  <div  class="Uploadbtn" >
+    <button type="button"  [routerLink]="['/edituser',userProfile.id]">Edit Profile</button>
+   
+  </div>
+  
+<div  class="Uploadbtn" > 
+  <button type="button" routerLink="/user-profile">Upload UserInfo</button>
+</div>
 </div>

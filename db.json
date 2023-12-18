@@ -104,6 +104,7 @@
     },
     {
       "userId": 3,
+      "name": "jk",
       "degree": "b.tech",
       "university": "RGPV",
       "year": "2023",
@@ -276,13 +277,12 @@
       "phone": "987-654-3210",
       "address": "456 Park Avenue, San Francisco"
     },
-    
     {
       "userId": 2,
-      "companyName": "hackerkernel",
       "email": "recruiter1@example.com",
+      "companyName": "hackerkernel",
       "phone": "08319903137",
-      "address": "kile andar chopada ,vidisha",
+      "address": "65, E8, Arera Colony, Bhopal, Madhya Pradesh 462039",
       "id": 2
     }
   ],

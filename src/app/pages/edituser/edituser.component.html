@@ -1,1 +1,61 @@
 <p>edituser works!</p>
+<!-- user-profile.component.html -->
+
+<form [formGroup]="edituserForm" >
+    <h2>Edit User Profile</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name" placeholder="name" required />
+
+    <label for="degree">Degree:</label>
+    <input type="text" formControlName="degree" placeholder="Degree" required />
+
+    <label for="university">University:</label>
+    <input type="text" formControlName="university" placeholder="University" required />
+
+    <label for="Year">Year:</label>
+    <input type="text" formControlName="year" placeholder="Year" required />
+
+    <div formArrayName="workExperience">
+  <div *ngFor="let experienceGroup of ExperienceFormArry.controls; let i=index" [formGroupName]="i" class="experience-group">
+    <label for="title">Title:</label>
+    <input type="text" formControlName="title" placeholder="title" required />
+
+    <label for="company">Company:</label>
+    <input type="text" formControlName="company" placeholder="company" required />
+
+    <label for="startDate">StartDate:</label>
+    <input type="date" formControlName="startDate" placeholder="startDate" required />
+
+    <label for="endDate">EndDate:</label>
+    <input type="date" formControlName="endDate" placeholder="endDate" required />
+
+    <label for="description">Description:</label>
+    <input type="text" formControlName="description" placeholder="Description" required />
+
+    <button type="button" class="removebtn" (click)="removeExperience(i)">Remove workExperience</button>
+  </div>
+  <button type="button" class="add" (click)="addExperience()">Add workExperience</button>
+</div>
+<div formArrayName="skills" >
+<div *ngFor="let skill of skillsFormArray.controls; let i=index" [formGroupName]="i">
+{{i}}
+<label for="name">Skills:</label>
+<input type="text" formControlName="name" placeholder="Add skills" />
+
+<button type="button" class="removebtn" (click)="removebtn(i)">Remove</button>
+<br>
+</div> 
+</div>
+<br>
+
+<button type="button" class="add" (click)="Addskills()">Add Skill</button>
+<br><br>
+<label for="profilePicture">profilePicture_Url:</label>
+<input type="file" formControlName="profilePicture" accept="img" placeholder="profilePicture" required />
+
+<label for="resumeUrl">Resume_Url:</label>
+<input type="file" formControlName="resumeUrl" accept="pdf" placeholder="resumeUrl" required />
+
+<button type="submit" (click)="OnSubmit()">Submit</button>
+</form>

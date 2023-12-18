@@ -29,6 +29,7 @@ export class UserprofileComponent implements OnInit {
 
     this.userForm= this.fb.group({
       userId : [this.userId.id ],
+      name: ['',Validators.required],
       degree: ['', Validators.required],
       university: ['', Validators.required],
       year: ['', Validators.required],

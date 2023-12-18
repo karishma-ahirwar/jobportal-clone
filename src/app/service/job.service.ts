@@ -9,9 +9,6 @@ import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
 export class JobService {
   authenticated: any;
 
-  // submitJobApplication(applicationData: { jobListingId: string | null; jobSeekerId: any; applicationDate: string; status: string; message: string; name: any; resume: any; }) {
-  //   throw new Error('Method not implemented.');
-  // }
   constructor(private http: HttpClient, private router :Router) { }
 
   api = 'http://localhost:3000';
@@ -57,7 +54,11 @@ export class JobService {
   getUserProfilesById(userId:any): Observable<any[]> {
     return this.http.get<any[]>(`${this.api}/userProfiles/${userId}`);
   }
-  
+  updateUserProfile(userId:any,userProfile:any){
+    console.log("edit user",userProfile);
+    return this.http.put(this.api+`/userProfiles/${userId}`,userProfile);
+
+  }
   postUserProfile(userData:any): Observable<any> {
     return this.http.post<any>(this.api+"/userProfiles",userData)
     .pipe(
