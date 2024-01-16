@@ -30,7 +30,7 @@ export class EditRecruiterComponent {
   ngOnInit(): void {
     this.editRecruiterForm = this.formBuilder.group({
       userId :[ this.userId.id,Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      email: [this.userId.email, [Validators.required, Validators.email]],
       companyName: ['', Validators.required],
       phone: ['', Validators.required],
       address: [''],

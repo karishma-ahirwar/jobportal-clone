@@ -26,14 +26,14 @@ export class EdituserComponent {
 
     this.edituserForm= this.fb.group({
       userId : [this.userId.id ],
-      name: ['',Validators.required],
-      degree: ['', Validators.required],
-      university: ['', Validators.required],
-      year: ['', Validators.required],
+      name: [this.userId.name,Validators.required],
+      degree: [this.userId.degree, Validators.required],
+      university: [this.userId.university, Validators.required],
+      year: [this.userId.year, Validators.required],
       workExperience: this.fb.array([]),
       skills: this.fb.array([]),
-      profilePicture: ['', Validators.required],
-      resumeUrl: ['', Validators.required],
+      profilePicture: [this.userId.profilePicture, Validators.required],
+      resumeUrl: [this.userId.resumeUrl, Validators.required],
     });
 
   }
@@ -54,6 +54,7 @@ export class EdituserComponent {
       const jobseekerdata= this.edituserForm.value;
       this._jobservice.updateUserProfile(this.userId,jobseekerdata).subscribe((response)=>{
         console.log('jobseeker updated successfully:', response);
+        this.router.navigateByUrl('user-details');
        
       },
       (error)=>{
